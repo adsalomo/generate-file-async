@@ -9,6 +9,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -54,5 +56,11 @@ public class ReportServiceImpl {
                     throw new Exception("No existe informacion");
             }
         }
+    }
+    
+    public List<Report> getAll() {
+        List<Report> reports = new ArrayList<>();
+        this.reportRepository.findAll().forEach(reports::add);
+        return reports;
     }
 }

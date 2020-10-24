@@ -3,6 +3,7 @@ package com.demo.app.dto;
 public class FiltersDto {
 
     private String paramTitle;
+    private ReportDto reportDto;
 
     /**
      * @return the paramTitle
@@ -16,6 +17,20 @@ public class FiltersDto {
      */
     public void setParamTitle(String paramTitle) {
         this.paramTitle = paramTitle;
+    }
+
+    /**
+     * @return the reportDto
+     */
+    public ReportDto getReportDto() {
+        return reportDto;
+    }
+
+    /**
+     * @param reportDto the reportDto to set
+     */
+    public void setReportDto(ReportDto reportDto) {
+        this.reportDto = reportDto;
     }
 
 }
